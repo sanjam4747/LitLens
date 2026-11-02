@@ -23,6 +23,7 @@ models/
 *.npz
 *.pkl
 *.parquet
+*.npy
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
