@@ -1,0 +1,33 @@
+#Dataset (large local research dataset)
+
+data/
+*.csv
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Environment & Secrets
+.env
+
+# Model Artifacts (serialized embeddings, large matrices)
+models/
+!models/.gitkeep
+*.npz
+*.pkl
+*.parquet
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Reference directory
+# (isolated reference repository remains intact)
+reference/
+
