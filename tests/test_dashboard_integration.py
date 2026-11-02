@@ -91,6 +91,14 @@ class TestDashboardIntegration(unittest.TestCase):
         for r in res:
             self.assertNotEqual(r["paper_id"], sample_id)
 
+    def test_three_consolidated_views_importable(self):
+        from dashboard.views.overview import render_overview_page
+        from dashboard.views.discovery import render_discovery_page
+        from dashboard.views.insights import render_insights_page
+        self.assertTrue(callable(render_overview_page))
+        self.assertTrue(callable(render_discovery_page))
+        self.assertTrue(callable(render_insights_page))
+
 
 if __name__ == "__main__":
     unittest.main()

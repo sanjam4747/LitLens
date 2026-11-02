@@ -51,11 +51,9 @@ flowchart TD
 
     subgraph Streamlit Discovery Dashboard
         F --> UI["dashboard/app.py"]
-        UI --> P1["🏠 Overview & Corpus Metrics"]
-        UI --> P2["🔍 Research Discovery (Natural-Language Search)"]
-        UI --> P3["📖 Similar Papers ('More Like This' with Base ID Deduplication)"]
-        UI --> P4["🧬 Topic Explorer (16 Discovered LDA Themes)"]
-        UI --> P5["📊 Corpus Analytics & Methodology"]
+        UI --> P1["Page 1: 🏠 Overview (Corpus Metrics, Architecture & Timeline)"]
+        UI --> P2["Page 2: 🔍 Research Discovery (Natural-Language Search & Similar Papers)"]
+        UI --> P3["Page 3: 📊 Research Insights (LDA Topic Explorer & Corpus Analytics)"]
     end
 ```
 
@@ -83,12 +81,10 @@ LitLens/
 │   │   ├── cards.py               # Academic paper cards & KPI widgets
 │   │   ├── charts.py              # Plotly dark-theme visualizers
 │   │   └── styles.py              # Modern dark CSS styling
-│   └── pages/                     # Modular section views
-│       ├── overview.py            # Corpus stats & system architecture
-│       ├── discovery.py           # Natural-language hybrid query search
-│       ├── similar_papers.py      # Seed paper similarity with version deduplication
-│       ├── topic_explorer.py      # 16 LDA topics inspection & discovery
-│       └── analytics.py           # Publication trends & category insights
+│   └── views/                     # Consolidated core views
+│       ├── overview.py            # Page 1: Overview (Corpus stats, architecture & timeline)
+│       ├── discovery.py           # Page 2: Research Discovery (Query search & Similar Papers)
+│       └── insights.py            # Page 3: Research Insights (LDA topics & Corpus analytics)
 ├── data/
 │   └── arXiv_scientific_dataset.csv # Raw dataset (287,421 records, preserved unmodified)
 ├── models/                        # Serialized model artifacts
